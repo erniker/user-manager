@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "e41fb9cd-5262-46a9-8a53-6f1285e2a697",
+		"name": "UserManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZkZmIzOWJhODUzNjc0OTY0ZTlhNDg2In0sImlhdCI6MTYwODQ5NjAyOCwiZXhwIjoxNjA4NDk5NjI4fQ.nU3jmJXYYJ1_0Aq6X13zAlZ1wgWGwGXJdj8NlL9fOLU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Juan\",\r\n    \"email\": \"juan@gmail.com\",\r\n    \"password\": \"150891=Jpmg\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseAddress}}/{{Folder}}",
+							"host": [
+								"{{baseAddress}}"
+							],
+							"path": [
+								"{{Folder}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZkZmIzOWJhODUzNjc0OTY0ZTlhNDg2In0sImlhdCI6MTYwODQ5NjAyOCwiZXhwIjoxNjA4NDk5NjI4fQ.nU3jmJXYYJ1_0Aq6X13zAlZ1wgWGwGXJdj8NlL9fOLU"
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseAddress}}/{{Folder}}",
+							"host": [
+								"{{baseAddress}}"
+							],
+							"path": [
+								"{{Folder}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZkZmIzOWJhODUzNjc0OTY0ZTlhNDg2In0sImlhdCI6MTYwODQ5OTk1OSwiZXhwIjoxNjA4NTAzNTU5fQ.KULEe9xnCnTeozOIrDEDXwZL2WMglZ0cJGLGVNaUs_E"
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Projecto Mern con redux\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseAddress}}/{{Folder}}/5fdfb441a853674964e9a489",
+							"host": [
+								"{{baseAddress}}"
+							],
+							"path": [
+								"{{Folder}}",
+								"5fdfb441a853674964e9a489"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZkZmIzOWJhODUzNjc0OTY0ZTlhNDg2In0sImlhdCI6MTYwODQ5NjAyOCwiZXhwIjoxNjA4NDk5NjI4fQ.nU3jmJXYYJ1_0Aq6X13zAlZ1wgWGwGXJdj8NlL9fOLU"
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Projecto Mern con redux\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseAddress}}/{{Folder}}/5fdfb3e8a853674964e9a487",
+							"host": [
+								"{{baseAddress}}"
+							],
+							"path": [
+								"{{Folder}}",
+								"5fdfb3e8a853674964e9a487"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZkZmIzOWJhODUzNjc0OTY0ZTlhNDg2In0sImlhdCI6MTYwODQ5OTk1OSwiZXhwIjoxNjA4NTAzNTU5fQ.KULEe9xnCnTeozOIrDEDXwZL2WMglZ0cJGLGVNaUs_E"
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Projecto Mern con redux\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseAddress}}/{{Folder}}/5fdfb441a853674964e9a489",
+							"host": [
+								"{{baseAddress}}"
+							],
+							"path": [
+								"{{Folder}}",
+								"5fdfb441a853674964e9a489"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.globals.set(\"Folder\", \"users\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "authUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"juan@gmail.com\",\r\n    \"password\": \"150891=Jpmg\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseAddress}}/{{Folder}}",
+							"host": [
+								"{{baseAddress}}"
+							],
+							"path": [
+								"{{Folder}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.globals.set(\"Folder\", \"auth\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseAddress",
+			"value": "http://localhost:4000/api"
+		}
+	]
+}
